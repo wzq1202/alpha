@@ -14,7 +14,6 @@ import java.util.concurrent.*;
 @SpringBootApplication
 public class OsApplication implements CommandLineRunner {
     @Autowired
-    private Sync4cpu sync4cpu;
     private final static ScheduledExecutorService service = Executors.newScheduledThreadPool(1);
     public static void main(String[] args) {
         SpringApplication.run(OsApplication.class, args);
@@ -24,7 +23,9 @@ public class OsApplication implements CommandLineRunner {
     public void run(String... strings) throws Exception {
         System.out.println(strings);
 
-        sync4cpu.compete();
+        System.out.println(this.getClass().getPackage().getName());
+
+//        sync4cpu.compete();
 //        service.scheduleAtFixedRate(() -> System.out.println(sync4cpu.getMap() + "A"),0,2000, TimeUnit.MILLISECONDS);
 
     }

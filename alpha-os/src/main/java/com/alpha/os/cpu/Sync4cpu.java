@@ -1,6 +1,6 @@
 package com.alpha.os.cpu;
 
-import org.springframework.stereotype.Component;
+import com.alpha.os.annotation.Executor;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -9,7 +9,7 @@ import java.util.Map;
  * 锁竞争对服务器的影响
  * Created by qiang on 2018/3/28.
  */
-@Component
+@Executor
 public class Sync4cpu{
     private volatile boolean isRun = true;
     private final static Object lock = new Object();
