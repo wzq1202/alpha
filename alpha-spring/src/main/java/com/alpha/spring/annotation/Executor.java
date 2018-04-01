@@ -1,4 +1,4 @@
-package com.alpha.os.annotation;
+package com.alpha.spring.annotation;
 
 import java.lang.annotation.*;
 

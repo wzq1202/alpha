@@ -1,6 +1,6 @@
 package com.alpha.os.cpu;
 
-import com.alpha.os.annotation.Executor;
+import com.alpha.spring.annotation.Executor;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -33,7 +33,7 @@ public class Sync4cpu{
         while (isRun) {
             synchronized (lock) {
                 String name = Thread.currentThread().getName();
-                map.remove(name);
+//                map.remove(name);
                 map.put(name,"A");
             }
 //            System.out.println(map);
