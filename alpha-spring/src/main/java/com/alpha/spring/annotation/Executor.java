@@ -10,4 +10,5 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Executor {
     String name() default "";
+    String mypck() default "";
 }
