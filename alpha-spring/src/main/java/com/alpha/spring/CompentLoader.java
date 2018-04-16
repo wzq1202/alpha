@@ -23,9 +23,10 @@ public class CompentLoader implements BeanFactoryPostProcessor {
         ClassPathBeanDefinitionScanner scanner = new ClassPathBeanDefinitionScanner(registry);
         scanner.addIncludeFilter(new AnnotationTypeFilter(Membership.class));
         scanner.scan(this.getClass().getPackage().getName());
-//        Set<BeanDefinition> beanDefinitions = scanner.findCandidateComponents(this.getClass().getPackage().getName());
+        /*
+        Set<BeanDefinition> beanDefinitions = scanner.findCandidateComponents(this.getClass().getPackage().getName());
 
-       /* for (BeanDefinition bdf : beanDefinitions) {
+        for (BeanDefinition bdf : beanDefinitions) {
             AnnotatedBeanDefinition abd = (AnnotatedBeanDefinition) bdf;
             AnnotationMetadata metadata = abd.getMetadata();
             if (metadata.hasAnnotation(Membership.class.getName())) {

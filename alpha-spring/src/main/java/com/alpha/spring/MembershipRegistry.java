@@ -38,9 +38,14 @@ public class MembershipRegistry implements IRegistry<MembershipHandler> {
 
 
     @Override
-    public void notify(ProductStore.Product product) {
-        String pckId = product.getPackageId();
-        MembershipHandler membershipHandler = registry.get(pckId);
+    public void notify(String id) {
+        MembershipHandler membershipHandler = registry.get(id);
         membershipHandler.process(null);
     }
+
+    public void notify(ProductStore.Product product) {
+        String pckId = product.getPackageId();
+        this.notify(pckId);
+    }
+
 }
