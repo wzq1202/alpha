@@ -11,7 +11,7 @@ import java.util.Map;
 public class DiamondMemership implements MembershipHandler,Commitable {
     @Override
     public Object process(Map<String, String> map) {
-
+        System.out.println("do DiamondMemership  ");
         return null;
     }
 

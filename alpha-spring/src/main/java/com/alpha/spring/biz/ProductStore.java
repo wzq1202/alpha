@@ -30,7 +30,7 @@ public class ProductStore {
     }
 
 
-    static class Product {
+    public static class Product {
         private String packageId;
         private String productId;
         private String productName;

@@ -11,11 +11,9 @@ import java.util.Map;
  */
 @Membership(packageId = "999",productId = "111")
 public class VipMemership implements MembershipHandler,Commitable {
-    @Autowired
-    private CompentLoader compentLoader;
     @Override
     public Object process(Map<String, String> map) {
-        System.out.println("compentloader ====== " + compentLoader);
+        System.out.println("do VipMemership  ");
         return null;
     }
 
