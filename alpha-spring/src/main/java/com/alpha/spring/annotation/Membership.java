@@ -8,7 +8,7 @@ import java.lang.annotation.*;
 @Documented
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Executor {
-    String name() default "";
-    String mypck() default "";
+public @interface Membership {
+    String packageId() default "";
+    String productId() default "";
 }

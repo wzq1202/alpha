@@ -13,5 +13,7 @@ public class AlphaSpringApplication {
     public static void main(String[] args) {
 
         SpringApplication.run(AlphaSpringApplication.class, args);
+
+
     }
 }
