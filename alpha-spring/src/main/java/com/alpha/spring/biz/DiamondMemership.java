@@ -11,7 +11,7 @@ import java.util.Map;
 @Membership(packageId = "1")
 public class DiamondMemership extends AbstractMembershipHandler{
     @Override
-    public Map<String,String> process(Map<String, String> map) {
+    public Map<String,String> process(ProductStore.Product product) {
         System.out.println("do DiamondMemership  ");
         return new HashMap(){{this.put("diamond","2019-05-31");}};
     }

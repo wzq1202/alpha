@@ -15,11 +15,15 @@ public abstract class AbstractMembershipHandler implements MembershipHandler,IPe
 
     @Override
     public Map<String, String> process(Map<String, String> map) {
+        ProductStore.Product product = null;
+        Map<String,String> res = this.process(product);
         if(autoCommit) {
             this.commit(map);
         }
-        return null;
+        return res;
     }
+
+    protected abstract Map<String,String> process(ProductStore.Product product);
 
     public void setAutoCommit(boolean autoCommit) {
         this.autoCommit = autoCommit;

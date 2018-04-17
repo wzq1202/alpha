@@ -1,7 +1,6 @@
 package com.alpha.spring;
 
 import com.alpha.spring.biz.ProductStore;
-import com.alpha.spring.biz.RedisCommand;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

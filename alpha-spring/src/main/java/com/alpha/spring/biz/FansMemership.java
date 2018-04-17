@@ -12,9 +12,8 @@ import java.util.Map;
 public class FansMemership extends AbstractMembershipHandler{
 
     @Override
-    public Map<String,String> process(Map<String, String> map) {
+    public Map<String,String> process(ProductStore.Product product) {
         System.out.println("do FansMemership  ");
-
         return new HashMap(){{this.put("t_63","2019-04-20");}};
     }
 }

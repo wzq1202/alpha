@@ -17,12 +17,14 @@ public class ProductStore {
         Product p4 = new Product("3", "5403", "阿森纳死忠通球票", new BigDecimal(158));
         Product p5 = new Product("3", "5404", "莱斯特城死忠通球票", new BigDecimal(158));
         Product p6 = new Product("3", "5405", "热刺死忠通球票", new BigDecimal(158));
+        Product p7 = new Product("999", "6570", "会员", new BigDecimal(200));
         products.put("5401",p1);
         products.put("6186",p2);
         products.put("6619",p3);
         products.put("5403",p4);
         products.put("5404",p5);
         products.put("5405",p6);
+        products.put("6570",p7);
     }
 
     public static Product getProduct(String productId) {
