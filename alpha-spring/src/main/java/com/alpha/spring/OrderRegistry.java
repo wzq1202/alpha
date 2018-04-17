@@ -1,7 +1,6 @@
 package com.alpha.spring;
 
 import com.alpha.spring.biz.MembershipHandler;
-import com.alpha.spring.biz.ProductStore;
 import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
@@ -19,11 +18,8 @@ public class OrderRegistry implements IRegistry<MembershipHandler> {
 
     }
 
-
-
-
     @Override
-    public void notify(ProductStore.Product product) {
+    public void notify(String id) {
 
     }
 }

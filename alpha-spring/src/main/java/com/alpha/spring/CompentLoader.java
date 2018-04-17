@@ -1,6 +1,7 @@
 package com.alpha.spring;
 
 import com.alpha.spring.annotation.Membership;
+import com.alpha.spring.biz.AbstractMembershipHandler;
 import com.alpha.spring.biz.MembershipHandler;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,7 +44,7 @@ public class CompentLoader implements BeanFactoryPostProcessor {
         for (String name : beanNames) {
             Object obj = beanFactory.getBean(name);
             if (obj instanceof MembershipHandler) {
-                membershipRegistry.register((MembershipHandler) obj);
+                membershipRegistry.register((AbstractMembershipHandler) obj);
             }
         }
     }

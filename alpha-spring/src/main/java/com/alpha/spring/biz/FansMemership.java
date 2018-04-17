@@ -2,22 +2,19 @@ package com.alpha.spring.biz;
 
 import com.alpha.spring.annotation.Membership;
 
+import java.util.HashMap;
 import java.util.Map;
 
 /**
  * Created by ssports on 2018/4/16.
  */
 @Membership(packageId = "3")
-public class FansMemership implements MembershipHandler,IPersistence {
+public class FansMemership extends AbstractMembershipHandler{
+
     @Override
-    public Object process(Map<String, String> map) {
+    public Map<String,String> process(Map<String, String> map) {
         System.out.println("do FansMemership  ");
-        return null;
-    }
 
-
-    @Override
-    public boolean persistence() {
-        return false;
+        return new HashMap(){{this.put("t_63","2019-04-20");}};
     }
 }

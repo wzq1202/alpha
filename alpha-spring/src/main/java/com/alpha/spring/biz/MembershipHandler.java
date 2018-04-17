@@ -7,5 +7,5 @@ import java.util.Map;
  */
 public interface MembershipHandler {
 
-    Object process(Map<String,String> map);
+    Map<String,String> process(Map<String,String> map);
 }
